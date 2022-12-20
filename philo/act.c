@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   act.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/20 15:05:13 by wochae            #+#    #+#             */
+/*   Updated: 2022/12/20 15:05:17 by wochae           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "philo.h"
 
@@ -61,7 +72,7 @@ void	*philo_act(void *arg)
 			philo_sleep(info, philo);
 		else if (philo->status == THINK)
 			philo_think(info, philo);
-	}	
+	}
 	add_full(info, philo->n_eat);
 	return (0);
 }

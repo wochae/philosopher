@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jabae <jabae@student.42seoul.kr>           +#+  +:+       +#+         #
+#    By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/24 15:25:57 by jabae             #+#    #+#              #
-#    Updated: 2022/09/05 15:21:27 by jabae            ###   ########.fr        #
+#    Created: 2022/12/20 15:54:39 by wochae            #+#    #+#              #
+#    Updated: 2022/12/20 16:03:32 by wochae           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,18 +19,18 @@ SRCS =	philo_bonus.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
-FLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 
 all	: $(NAME)
 
 $(NAME)	:	$(OBJS)
-		@cc $(FLAGS)  -o $(NAME) $(OBJS)
+		@cc $(CFLAGS) -o $(NAME) $(OBJS)
 		@echo "🍽 MAKE bonus SUCCESS"
 
 %.o	:	%.c
 	@cc $(FLAGS) -c $^ -I./
 
-clean	: 
+clean	:
 		@rm -f $(OBJS)
 		@echo "🍽 CLEAN bonus SUCCESS"
 

@@ -1,26 +1,40 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/12/20 15:05:30 by wochae            #+#    #+#              #
+#    Updated: 2022/12/20 17:23:22 by wochae           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-NAME =  philo
-
-CC = cc
-CFLAGS = -Wall -Werror -Wextra #-fsanitize=thread -g 
+NAME = philo
 
 SRCS = main.c philo.c act.c utils.c
+
+CC = cc
+CFLAGS = -Wall -Werror -Wextra
 
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	@$(CC) $(CFLAGS) -o $@ $^
+		@cc $(CFLAGS) -o $(NAME) $(OBJS)
+		@echo "🍽 MAKE SUCCESS"
 
 %.o :%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-clean :
-	@rm -rf $(OBJS)
+clean	:
+		@rm -rf $(OBJS)
+		@echo "🍽 CLEAN SUCCESS"
 
-fclean : clean
-	@rm -rf $(NAME)
+fclean	:	clean
+		@rm -rf $(NAME)
+		@echo "🍽 FCLEAN SUCCESS"
 
 re : fclean all
 

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/20 15:05:21 by wochae            #+#    #+#             */
+/*   Updated: 2022/12/20 15:05:22 by wochae           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "philo.h"
 
@@ -33,7 +44,7 @@ int	set_mutex(t_info *info)
 	{
 		if (pthread_mutex_init(&info->fork[i], 0) != 0)
 			return (1);
-	}	
+	}
 	if (pthread_mutex_init(&info->print, 0) != 0)
 		return (1);
 	if (pthread_mutex_init(&info->check_death, 0) != 0)
