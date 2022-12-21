@@ -6,7 +6,7 @@
 /*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:54:50 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/20 15:54:50 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/21 17:48:42 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ static void	*monitoring(void	*ph)
 			exit(EXIT_FAILURE);
 		}
 		sem_post(info->check_last_eat);
-		usleep(200);
 	}
 	return (0);
 }
