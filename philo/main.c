@@ -6,7 +6,7 @@
 /*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:05:21 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/20 15:05:22 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/21 16:38:38 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	set_philo(t_info *info, t_philo **philo)
 	i = -1;
 	while (++i < info->n_philo)
 	{
-		(*philo)[i].id = i;
+		(*philo)[i].id = i + 1;
 		(*philo)[i].left = i;
 		(*philo)[i].right = i + 1;
 		if (i + 1 == info->n_philo)

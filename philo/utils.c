@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: wochae <wochae@studnet.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:05:46 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/20 15:05:46 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/21 18:36:46 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,23 @@ void	prints(t_info *info, int id, int status)
 
 	pthread_mutex_lock(&(info->check_death));
 	dead = info->is_dead;
-	pthread_mutex_unlock(&(info->check_death));
 	if (!dead)
 	{
 		pthread_mutex_lock(&(info->print));
 		now = get_time() - info->t_start;
 		if (status == 1)
-			printf("%lld %d has taken a fork\n", now, id + 1);
+			printf("%lld %d has taken a fork\n", now, id);
 		else if (status == 2)
-			printf("%lld %d is eating\n", now, id + 1);
+			printf("%lld %d is eating\n", now, id);
 		else if (status == 3)
-			printf("%lld %d is sleeping\n", now, id + 1);
+			printf("%lld %d is sleeping\n", now, id);
 		else if (status == 4)
-			printf("%lld %d is thinking\n", now, id + 1);
+			printf("%lld %d is thinking\n", now, id);
 		else if (status == 5)
-			printf("%lld %d died\n", now, id + 1);
+			printf("%lld %d died\n", now, id);
 		pthread_mutex_unlock(&(info->print));
 	}
+	pthread_mutex_unlock(&(info->check_death));
 }
 
 void	psleep(long long t_sleep)
