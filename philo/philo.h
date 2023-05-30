@@ -6,7 +6,7 @@
 /*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:05:40 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/20 15:05:42 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/22 18:26:56 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int			check_digit(char *argv[]);
 int			ft_atoi(const char *str);
 
 /* philo.c */
-void		morintoring(t_info *info, t_philo **philo);
+void		monitoring(t_info *info, t_philo **philo);
 int			is_dead(t_info *info, t_philo *philo);
 int			is_full(t_info *info);
 int			philo_start(t_info *info, t_philo *philo);

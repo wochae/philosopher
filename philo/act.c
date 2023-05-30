@@ -6,7 +6,7 @@
 /*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:05:13 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/21 17:34:58 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/22 18:18:14 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	*philo_act(void *arg)
 
 	philo = (t_philo *)arg;
 	info = philo->info;
-	if (philo->id % 2 == 1)
+	if (philo->id % 2 == 0)
 		psleep(info->t_eat / 2);
 	while (1)
 	{

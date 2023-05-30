@@ -6,7 +6,7 @@
 /*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:05:21 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/21 16:38:38 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/22 18:29:11 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,7 @@ int	main(int argc, char *argv[])
 		return (printf("set_mutex failed\n"));
 	if (philo_start(&info, philo))
 		return (printf("philo_start failed\n"));
-	morintoring(&info, &philo);
+	monitoring(&info, &philo);
 	free_all(&info, &philo);
 	return (0);
 }

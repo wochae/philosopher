@@ -6,13 +6,13 @@
 /*   By: wochae <wochae@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:05:37 by wochae            #+#    #+#             */
-/*   Updated: 2022/12/20 15:05:38 by wochae           ###   ########.fr       */
+/*   Updated: 2022/12/22 18:28:27 by wochae           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	morintoring(t_info *info, t_philo **philo)
+void	monitoring(t_info *info, t_philo **philo)
 {
 	int	i;
 
